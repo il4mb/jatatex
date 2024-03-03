@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Webpack App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./dist/main.css">
+    <script src="./dist/main.js"></script>
+
+    <style>
+        * {
+            font-family: "Montserrat", sans-serif;
+        }
+
+        body {
+            background-color: #eaeaea;
+            overflow-x: hidden;
+            overflow-y: auto;
+            max-width: 100vw;
+        }
+
+        main {
+            max-width: 100vw;
+            overflow-x: hidden;
+        }
+
+        .welcome {
+            background: url("./assets/img/advantages-automatic-doors-laboratories-39980-17180723.jpg");
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+            background-position: center;
+
+        }
+
+        .filter-shadow {
+            filter: drop-shadow(0px 10px 5px #989898);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top top-0 shadow-sm">
+        <div class="container-lg">
+            <a class="navbar-brand" href="#">
+                <img width="50" height="50" src="./assets/img/logo.png" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about-us">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#our-services">Our services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#why-us">Why us</a>
+                    </li>
+                    
+                </ul>
+                <div>
+                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#" role="button">Get Started <i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <main>
+        <div class="vh-100">
+            <div class="welcome">
+                <div>
+                    <div class="row">
+                        <div class="col-12 vh-100 d-flex flex-column justify-content-center align-items-center">
+                            <div class="text-center filter-shadow mx-auto mb-4 animate__bounceIn">
+                                <h1 class="mb-0 fw-bold fs-1 text-base" data-animate="animate__rubberBand"
+                                    data-animate-start="imidiate">JATATEX</h1>
+                                <small class="text-base">Jaya Utama Teknindo</small>
+                            </div>
+                            <div class="w-100 text-center bg-base text-light p-2 opacity mb-3">Modular Operation Threate
+                                -
+                                Hermatic - Automatic Sliding Door</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slice-side -index-1 shadow-md opacity-75"></div>
+            </div>
+
+            <div id="info" class="position-fixed bg-light rounded p-3 shadow-lg bottom-0 ms-5 mb-3 index-2"
+                data-animate="animate__zoomInDown" data-animate-start="imidiate">
+                <div class="fs-5"><i class="fa-solid fa-triangle-exclamation"></i> Info</div>
+                <p><small>Gartis biaya konsultasi, silahkan hubungi nomor whatsapp di bawah ini.</small></p>
+                <button class="btn btn-sm btn-outline-dark px-4 rounded-pill" type="button"
+                    data-animate="animate__pulse animate__infinite animate__fast" data-animate-start="imidiate">
+                    <i class="fa-brands fa-whatsapp"></i> Hubungi Via Whatsapp
+                </button>
+            </div>
+        </div>
+
+        <main class="bg-light py-5 shadow-lg">
+
+            <div class="container-md">
+
+                <div class="row p-2 p-md-5 mb-5">
+                    <div class="col-12 col-md-4 d-flex justify-content-center mb-5">
+                        <img class="img-cover object-fit rounded filter-shadow" data-animate="animate__bounceInLeft"
+                            width="200" height="200" src="./assets/img/alt.png" alt="Logo"
+                            srcset="./assets/img/logo.png">
+                    </div>
+
+                    <div class="col-12 col-md-8">
+                        <section class="mb-4" id="about-us">
+
+                            <header class="mb-3" data-animate="animate__lightSpeedInRight">
+                                <h2 class="text-thumb">Selamat datang</h2>
+                            </header>
+                            <article class="bg-white p-3 rounded" data-animate="animate__zoomInUp animate__faster">
+                                <p>Di <b>JATATEX</b>, kami berada di garis depan dalam merevolusi infrastruktur
+                                    medis
+                                    dan industri
+                                    dengan
+                                    teknologi canggih dan solusi inovatif. Nama kami, "Jaya Utama Teknindo," yang
+                                    merupakan
+                                    keunggulan
+                                    tertinggi dalam teknologi, mencerminkan komitmen kami untuk memberikan layanan
+                                    dan
+                                    produk
+                                    yang
+                                    tak
+                                    tertandingi. Mengkhususkan diri dalam Ruang Operasi Modular, Solusi Penutupan
+                                    Hermetic, dan
+                                    Pintu
+                                    Geser Otomatis, kami melayani berbagai kebutuhan, memastikan kualitas tinggi,
+                                    keandalan, dan
+                                    efisiensi.</p>
+
+                            </article>
+                        </section>
+                    </div>
+
+                </div>
+
+                <section class="mb-5" id="our-services">
+                    <header class="mb-2" data-animate="animate__fadeIn">
+                        <h3 class="app-title text-white">Layanan Kami</h3>
+                    </header>
+                    <article>
+                        <ul class="list-unstyled">
+                            <li class="mb-4">
+                                <section class="bg-white p-3 rounded">
+                                    <header class="mb-3" data-animate="animate__lightSpeedInLeft">
+                                        <h4>Modular Operation Theatre</h4>
+                                    </header>
+                                    <article>
+                                        <div class="row flex-wrap-reverse justify-content-center">
+                                            <div class="col-12 col-sm-11 col-md-8 py-2">
+                                                <p data-animate="animate__lightSpeedInLeft">JATATEX berdedikasi untuk
+                                                    meningkatkan efisiensi dan keamanan
+                                                    fasilitas
+                                                    medis. Ruang
+                                                    operasi modular kami dirancang dengan presisi, menggabungkan
+                                                    teknologi
+                                                    mutakhir untuk
+                                                    menciptakan lingkungan steril dan terkendali yang memenuhi standar
+                                                    kesehatan
+                                                    tertinggi.
+                                                    Setiap modul disesuaikan untuk mendukung kebutuhan kompleks ahli
+                                                    bedah dan
+                                                    staf medis,
+                                                    memastikan keselamatan pasien dan hasil optimal.</p>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="obj shadow text-center m-2"
+                                                    data-animate="animate__lightSpeedInRight">
+                                                    <img class="drop animate"
+                                                        src="./assets/img/modular-operating-theatres-system-alvo-medical.jpg"
+                                                        alt="Modular Operation Theatre">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </section>
+                            </li>
+
+                            <li class="mb-4">
+                                <section class="bg-white p-3 rounded">
+                                    <header class="mb-3" data-animate="animate__lightSpeedInLeft">
+                                        <h4>Hermatic Sealing Solutions</h4>
+                                    </header>
+                                    <article class="mb-3">
+                                        <div class="row justify-content-center">
+                                            <div class="col-auto" data-animate="animate__fadeInLeft">
+                                                <div class="obj shadow text-center m-2">
+                                                    <img class="hexagon"
+                                                        src="./assets/img/modular-operating-theatres-system-alvo-medical.jpg"
+                                                        alt="Modular Operation Theatre">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-11 col-md-8 py-2">
+                                                <p data-animate="animate__lightSpeedInRight">Memahami kebutuhan kritis
+                                                    untuk pengendalian kontaminasi di berbagai
+                                                    pengaturan, JATATEX
+                                                    menawarkan solusi penutupan hermetic yang tak tertandingi dalam
+                                                    kualitas dan
+                                                    kinerja.
+                                                    Pintu dan sistem penutupan hermetic kami ideal untuk lingkungan di
+                                                    mana
+                                                    kemurnian udara
+                                                    dan kontrol tekanan sangat penting, seperti dalam farmasi,
+                                                    laboratorium, dan
+                                                    rumah
+                                                    sakit. Dengan teknologi canggih kami, kami memastikan bahwa ruang
+                                                    Anda tetap
+                                                    aman dari
+                                                    kontaminasi eksternal apa pun.</p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </section>
+                            </li>
+
+                            <li class="mb-4">
+                                <section class="bg-white p-3 rounded">
+                                    <header class="mb-3" data-animate="animate__lightSpeedInLeft">
+                                        <h4>Automatic Sliding Doors</h4>
+                                    </header>
+                                    <article>
+                                        <div class="row flex-wrap-reverse justify-content-center">
+                                            <div class="col-12 col-sm-11 col-md-8 py-2">
+                                                <p data-animate="animate__zoomInUp animate__faster">Menerima
+                                                    otomatisasi, JATATEX menyediakan sistem pintu geser
+                                                    otomatis yang
+                                                    canggih yang
+                                                    menyatu dengan sempurna ke dalam desain arsitektural apa pun. Pintu
+                                                    kami
+                                                    tidak hanya
+                                                    menawarkan kenyamanan dan aksesibilitas tetapi juga efisiensi energi
+                                                    dan
+                                                    keamanan.
+                                                    Sesuai untuk berbagai aplikasi mulai dari bangunan komersial hingga
+                                                    rumah
+                                                    sakit, pintu
+                                                    geser otomatis kami dirancang untuk meningkatkan aliran lalu lintas
+                                                    sambil
+                                                    menjaga daya
+                                                    tarik estetika ruang.</p>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="obj shadow flip text-center m-2"
+                                                    data-animate="animate__lightSpeedInRight">
+                                                    <img class="drop"
+                                                        src="./assets/img/modular-operating-theatres-system-alvo-medical.jpg"
+                                                        alt="Modular Operation Theatre">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </section>
+                            </li>
+
+                        </ul>
+                    </article>
+                </section>
+
+
+                <section class="py-5" id="why-us">
+                    <header class="mb-4">
+                        <h2 class="text-center" data-animate="animate__flipInX">Mengapa Memilih JATATEX?</h2>
+                    </header>
+
+                    <article>
+                        <ul class="list-unstyled row row-cols-1 row-cols-md-2 justify-content-center gap-3">
+                            <li class="col-12 col-md-5 flex-grow-1">
+                                <div class="card border-0 shadow-sm h-100" data-animate="animate__lightSpeedInLeft">
+                                    <div class="d-flex justify-content-center py-5"><i
+                                            class="fa-solid fa-industry fa-4x"></i></div>
+                                    <div class="card-body">
+                                        <div class="card-title h5">Inovasi</div>
+                                        <p class="card-text">Kami terus mendorong batas-batas teknologi dan desain,
+                                            memastikan bahwa
+                                            solusi
+                                            kami
+                                            berada di garis depan inovasi.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="col-12 col-md-5 flex-grow-1">
+                                <div class="card border-0 shadow-sm h-100" data-animate="animate__lightSpeedInRight">
+                                    <div class="d-flex justify-content-center py-5"><i
+                                            class="fa-solid fa-hammer fa-4x"></i></div>
+                                    <div class="card-body">
+                                        <div class="card-title h5">Penyesuaian</div>
+                                        <p class="card-text">Memahami bahwa setiap klien memiliki kebutuhan unik, kami
+                                            menawarkan solusi
+                                            yang
+                                            disesuaikan yang sempurna sesuai dengan persyaratan khusus Anda.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="col-12 col-md-5 flex-grow-1">
+                                <div class="card border-0 shadow-sm h-100" data-animate="animate__lightSpeedInLeft">
+                                    <div class="d-flex justify-content-center py-5"><i
+                                            class="fa-solid fa-truck-fast fa-4x"></i></div>
+                                    <div class="card-body">
+                                        <div class="card-title h5">Jaminan Kualitas</div>
+                                        <p class="card-text">Jaminan Kualitas: Di JATATEX, kualitas bukan hanya janji;
+                                            itu jaminan. Kami
+                                            mematuhi
+                                            standar kerajinan dan layanan tertinggi.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="col-12 col-md-5 flex-grow-1">
+                                <div class="card border-0 shadow-sm h-100" data-animate="animate__lightSpeedInRight">
+                                    <div class="d-flex justify-content-center py-5"><i
+                                            class="fa-solid fa-screwdriver-wrench fa-4x"></i></div>
+                                    <div class="card-body">
+                                        <div class="card-title h5">Keberlanjutan</div>
+                                        <p class="card-text">Berkomitmen pada lingkungan, kami memastikan bahwa produk
+                                            dan solusi kami
+                                            hemat
+                                            energi dan berkelanjutan, mengurangi jejak karbon.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="col-12 col-md-5 flex-grow-1">
+                                <div class="card card-body border-0 shadow-sm h-100"
+                                    data-animate="animate__lightSpeedInLeft">
+                                    <div class="d-flex justify-content-center py-5"><i
+                                            class="fa-solid fa-users fa-4x"></i></div>
+                                    <div class="card-body">
+                                        <div class="card-title h5">Tim Ahli</div>
+                                        <p class="card-text">Tim ahli kami adalah aset terbesar kami, dengan pengetahuan
+                                            dan pengalaman
+                                            yang
+                                            luas
+                                            dalam
+                                            merancang, menginsinyur, dan menerapkan solusi kami.</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </article>
+                </section>
+
+                <section class="py-5" data-animate="animate__fadeInUp">
+                    <article>
+                        <p>JATATEX - Jaya Utama Teknindo bukan hanya penyedia layanan; kami adalah mitra Anda dalam
+                            inovasi, berkomitmen untuk keunggulan dan kesuksesan proyek Anda. Biarkan kami membantu Anda
+                            mendefinisikan kembali ruang Anda dengan solusi kami yang canggih, andal, dan efisien.</p>
+                    </article>
+                </section>
+            </div>
+        </main>
+    </main>
+
+    <div class="position-fixed d-flex flex-column gap-2 bottom-0 end-0 p-3 index-3 transition-5">
+
+        <button class="btn btn-primary transition-5" style="opacity: 1;" id="btn-whatsapp"
+            data-animate="animate__pulse animate__infinite animate__fast" data-animate-start="imidiate">
+            <i class="fa-brands fa-whatsapp"></i>
+        </button>
+
+        <button class="btn btn-dark transition-5" style="display: none;" id="btn-back-to-top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+    </div>
+
+    <footer class="bg-white p-3 pt-md-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="d-flex align-items-center">
+                        <p class="m-0"><small>Create With <i class="fa-solid fa-heart"></i> By <a
+                                    href="https://github.com/il4mb">Il4mb </a></small></p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="d-flex align-items-center">
+                        <p class="">© 2022 JATATEX. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+        setTimeout(() => $('.welcome').children().addClass('start'), 200);
+
+
+        var timming_stack = [];
+
+        $("#btn-back-to-top").on("click", (e) => {
+            $("html, body").animate({
+                scrollTop: 0
+            }, 500);
+        });
+
+        $("#btn-whatsapp").on("click", (e) => {
+            window.open("https://api.whatsapp.com/send/?phone=6287742222966&text&type=phone_number&app_absent=0&text=" + encodeURIComponent("Hallo bg ilham."), "_blank");
+        });
+
+
+        $("[data-animate]").each((i, el) => {
+
+            if (!$(el).attr("animate-id")) {
+                $(el).attr("animate-id", Date.now() + "_" + Math.random());
+            }
+
+            let animate = $(el).data("animate");
+            let animate_start = $(el).data("animate-start");
+
+            if (animate_start == "imidiate") {
+                $(el).addClass(animate);
+            }
+        });
+
+        animateHandler();
+
+        $(document).on("scroll", (e) => {
+            if (window.scrollY > 75) {
+                $("#info").fadeOut(300);
+                $(".welcome").children().removeClass('start');
+                $("#btn-back-to-top").fadeIn(300);
+            } else {
+                $(".welcome").children().addClass('start');
+                $("#btn-back-to-top").fadeOut(300);
+                $("#info").fadeIn(300);
+            }
+            animateHandler();
+        });
+
+        function animateHandler() {
+
+            $("[data-animate]").each((i, el) => {
+
+                if (!$(el).attr("animate-id")) {
+                    $(el).attr("animate-id", Date.now() + "_" + Math.random());
+                }
+
+
+                $(el).addClass("animate__animated");
+                let animateIn = $(el).data("animate");
+
+                if ((window.scrollY > $(el).offset().top - $(window).height())) {
+
+                    if (timming_stack[$(el).attr("animate-id")]) clearTimeout(timming_stack[$(el).attr("animate-id")]);
+
+                    timming_stack[$(el).attr("animate-id")] = setTimeout(() => {
+                        $(el).addClass("start");
+                        if (!animateIn && !$(el).hasClass(animateIn)) return;
+                        $(el).addClass(animateIn);
+                        $(el).trigger("animation:start");
+                    }, 50);
+
+                } else {
+                    $(el).removeClass("start");
+                    if ($(el).data("animate-onetime")) return;
+                    $(el).removeClass(animateIn);
+                    $(el).trigger("animation:stop");
+                }
+            });
+        }
+
+    </script>
+</body>
+
+</html>
