@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Webpack App</title>
+    <title>Jatatex - welcome to Jatatex</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -71,10 +71,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#why-us">Why us</a>
                     </li>
-                    
+
                 </ul>
                 <div>
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#" role="button">Get Started <i class="fa-brands fa-whatsapp"></i></a>
+                    <a onclick="hubungi()" class="btn btn-primary btn-sm rounded-pill px-3" href="#" role="button"
+                        data-animate="animate__pulse animate__infinite animate__fast" data-animate-start="imidiate">Get
+                        Started <i class="fa-brands fa-whatsapp"></i></a>
                 </div>
             </div>
         </div>
@@ -106,7 +108,8 @@
                 <div class="fs-5"><i class="fa-solid fa-triangle-exclamation"></i> Info</div>
                 <p><small>Gartis biaya konsultasi, silahkan hubungi nomor whatsapp di bawah ini.</small></p>
                 <button class="btn btn-sm btn-outline-dark px-4 rounded-pill" type="button"
-                    data-animate="animate__pulse animate__infinite animate__fast" data-animate-start="imidiate">
+                    data-animate="animate__pulse animate__infinite animate__fast" data-animate-start="imidiate"
+                    onclick="hubungi()">
                     <i class="fa-brands fa-whatsapp"></i> Hubungi Via Whatsapp
                 </button>
             </div>
@@ -413,7 +416,7 @@
         });
 
         $("#btn-whatsapp").on("click", (e) => {
-            window.open("https://api.whatsapp.com/send/?phone=6287742222966&text&type=phone_number&app_absent=0&text=" + encodeURIComponent("Hallo bg ilham."), "_blank");
+            hubungi();
         });
 
 
@@ -478,6 +481,9 @@
             });
         }
 
+        function hubungi() {
+            window.open("https://api.whatsapp.com/send/?phone=6287742222966&text&type=phone_number&app_absent=0&text=" + encodeURIComponent("Hallo bg ilham."), "_blank");
+        }
     </script>
 </body>
 
