@@ -42,6 +42,10 @@
         .filter-shadow {
             filter: drop-shadow(0px 10px 5px #989898);
         }
+
+        #main {
+            scroll-behavior: auto;
+        }
     </style>
 </head>
 
@@ -52,12 +56,17 @@
             <a class="navbar-brand" href="#">
                 <img width="50" height="50" src="./assets/img/logo.png" alt="Logo">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            <button class="navbar-toggler outline-none border-0 py-2" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span class="icon icon-menu fs-3 flip-x flip-y"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse navbar-menu" id="navbarSupportedContent">
+                <div class="menu-header">
+                    <div class="menu-title">Jatatex</div>
+                    <button class="btn-close">
+                    </button>
+                </div>
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
@@ -103,8 +112,8 @@
                 <div class="slice-side -index-1 shadow-md opacity-75"></div>
             </div>
 
-            <div id="info" class="position-fixed bg-light rounded p-3 shadow-lg bottom-0 ms-5 mb-3 index-2"
-                data-animate="animate__zoomInDown" data-animate-start="imidiate">
+            <div id="info" class="position-fixed bg-light rounded p-3 shadow-lg bottom-0 ms-1 ms-md-5 mb-3 index-2"
+                style="width: 80%; max-width: 400px;" data-animate="animate__zoomInDown" data-animate-start="imidiate">
                 <div class="fs-5"><i class="fa-solid fa-triangle-exclamation"></i> Info</div>
                 <p><small>Gartis biaya konsultasi, silahkan hubungi nomor whatsapp di bawah ini.</small></p>
                 <button class="btn btn-sm btn-outline-dark px-4 rounded-pill" type="button"
@@ -115,24 +124,25 @@
             </div>
         </div>
 
-        <main class="bg-light py-5 shadow-lg">
+        <main class="bg-light py-5 shadow-lg" id="main">
 
             <div class="container-md">
 
                 <div class="row p-2 p-md-5 mb-5">
                     <div class="col-12 col-md-4 d-flex justify-content-center mb-5">
-                        <img class="img-cover object-fit rounded filter-shadow" data-animate="animate__bounceInLeft"
-                            width="200" height="200" src="./assets/img/alt.png" alt="Logo"
-                            srcset="./assets/img/logo.png">
+                        <img class="img-cover object-fit rounded filter-shadow"
+                            data-animate="animate__bounceInLeft animate__delay-100ms" width="200" height="200"
+                            src="./assets/img/alt.png" alt="Logo" srcset="./assets/img/logo.png">
                     </div>
 
                     <div class="col-12 col-md-8">
-                        <section class="mb-4" id="about-us">
+                        <section class="mb-4 py-5 mb-5" id="about-us">
 
-                            <header class="mb-3" data-animate="animate__lightSpeedInRight">
+                            <header class="mb-3" data-animate="animate__lightSpeedInRight animate__delay-200ms">
                                 <h2 class="text-thumb">Selamat datang</h2>
                             </header>
-                            <article class="bg-white p-3 rounded" data-animate="animate__zoomInUp animate__faster">
+                            <article class="bg-white p-3 rounded"
+                                data-animate="animate__zoomInUp animate__faster animate__delay-400ms">
                                 <p>Di <b>JATATEX</b>, kami berada di garis depan dalam merevolusi infrastruktur
                                     medis
                                     dan industri
@@ -419,6 +429,31 @@
             hubungi();
         });
 
+        $("button.navbar-toggler").on("click", function () {
+
+            if (window.innerWidth <= 992) {
+                if ($(".menu-backdrop").length <= 0) {
+                    $(`<div class='menu-backdrop'></div>`).insertBefore($(this));
+                } else {
+                    $(".menu-backdrop").remove();
+                }
+            }
+
+            $(document).off("click", clickOut);
+            $(document).on("click", clickOut);
+
+            function clickOut(e) {
+                if ($(e.target).hasClass("menu-backdrop")) {
+                    $("div.navbar-menu").removeClass("show");
+                    $(".menu-backdrop").remove();
+                }
+            }
+        });
+
+        $(".btn-close").on("click", () => {
+            $("div.navbar-menu").removeClass("show");
+            $(".menu-backdrop").remove();
+        })
 
         $("[data-animate]").each((i, el) => {
 
@@ -436,6 +471,9 @@
 
         animateHandler();
 
+        let lastScrollY = 0;
+        let isAutoScrollRunning = false;
+        let delayTimming;
         $(document).on("scroll", (e) => {
             if (window.scrollY > 75) {
                 $("#info").fadeOut(300);
@@ -447,7 +485,34 @@
                 $("#info").fadeIn(300);
             }
             animateHandler();
+
+
+            console.log(lastScrollY, window.scrollY, window.screen.height);
+
+
+            if (lastScrollY < window.scrollY && window.scrollY < window.screen.height) {
+
+                if (delayTimming) clearTimeout(delayTimming);
+
+                delayTimming = setTimeout(() => {
+                    console.log("scroll bottom")
+                    window.scrollTo(0, $("#main").offset().top - 75);
+                }, 25)
+            } else if (lastScrollY > window.scrollY && window.scrollY < (window.screen.height - 100)) {
+                if (delayTimming) clearTimeout(delayTimming);
+
+                delayTimming = setTimeout(() => {
+                    console.log("scroll top")
+                    window.scrollTo(0, 0);
+                }, 25)
+            } else {
+                if (delayTimming) clearTimeout(delayTimming);
+            }
+
+            lastScrollY = window.scrollY;
         });
+
+
 
         function animateHandler() {
 
